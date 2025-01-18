@@ -11,17 +11,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TextRequest implements Request {
-	private ModelType modelType;
-	private Double temperature;
-	private String assistantContent;
-	private String systemContent;
-	private String userContent;
-	private Integer n;
+	private final ModelType modelType;
+	private final Double temperature;
+	private final String assistantContent;
+	private final String systemContent;
+	private final String userContent;
+	private final Integer numOfResponsesPerRequest;
 
 	public TextRequest(TextRequestBuilder textRequestBuilder) {
 		this.modelType = textRequestBuilder.getModelType() != null ? textRequestBuilder.getModelType() : ModelType.GPT4omini;
 		this.temperature = textRequestBuilder.getTemperature() != null ? textRequestBuilder.getTemperature() : 1;
-		this.n = textRequestBuilder.getN() != null ? textRequestBuilder.getN() : 1;
+		this.numOfResponsesPerRequest = textRequestBuilder.getNumOfResponses() != null ? textRequestBuilder.getNumOfResponses() : 1;
 		this.userContent = textRequestBuilder.getUserContent();
 		this.systemContent = textRequestBuilder.getSystemContent();
 		this.assistantContent = textRequestBuilder.getAssistantContent();
@@ -34,7 +34,7 @@ public class TextRequest implements Request {
 		JsonObject prompt = new JsonObject();
 		prompt.addProperty("model", this.modelType.getModel());
 		prompt.addProperty("temperature", this.temperature);
-		prompt.addProperty("n", this.n);
+		prompt.addProperty("n", this.numOfResponsesPerRequest);
 		return prompt;
 	}
 

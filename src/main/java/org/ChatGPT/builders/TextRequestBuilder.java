@@ -12,7 +12,7 @@ public class TextRequestBuilder implements Builder {
 	private String assistantContent;
 	private String systemContent;
 	private String userContent;
-	private Integer n;
+	private Integer numOfResponsesPerRequest;
 
 	public ModelType getModelType() {
 		return modelType;
@@ -34,8 +34,8 @@ public class TextRequestBuilder implements Builder {
 		return userContent;
 	}
 
-	public Integer getN() {
-		return n;
+	public Integer getNumOfResponses() {
+		return numOfResponsesPerRequest;
 	}
 
 	public TextRequestBuilder() {
@@ -53,9 +53,9 @@ public class TextRequestBuilder implements Builder {
 		return this;
 	}
 
-	public TextRequestBuilder setN(Integer n) {
-		if (n < 1) throw new RequestBuildException("Invalid 'n' value: must be at least 1");
-		this.n = n;
+	public TextRequestBuilder setNumOfResponses(Integer numOfResponsesPerRequest) {
+		if (numOfResponsesPerRequest < 1) throw new RequestBuildException("Invalid 'n' value: must be at least 1");
+		this.numOfResponsesPerRequest = numOfResponsesPerRequest;
 		return this;
 	}
 
