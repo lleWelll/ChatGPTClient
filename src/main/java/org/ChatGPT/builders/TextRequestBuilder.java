@@ -4,7 +4,7 @@ package org.ChatGPT.builders;
 import org.ChatGPT.requests.TextRequest;
 import org.ChatGPT.enums.ModelType;
 import org.ChatGPT.exceptions.RequestBuildException;
-import org.ChatGPT.inrefaces.Builder;
+import org.ChatGPT.interfaces.Builder;
 
 public class TextRequestBuilder implements Builder {
 	private ModelType modelType;

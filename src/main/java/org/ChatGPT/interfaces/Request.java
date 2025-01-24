@@ -1,4 +1,4 @@
-package org.ChatGPT.inrefaces;
+package org.ChatGPT.interfaces;
 
 public interface Request {
 	String getJson();

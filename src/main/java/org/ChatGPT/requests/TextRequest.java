@@ -5,7 +5,7 @@ import com.google.gson.JsonObject;
 import org.ChatGPT.builders.TextRequestBuilder;
 import org.ChatGPT.enums.ModelType;
 import org.ChatGPT.exceptions.RequestException;
-import org.ChatGPT.inrefaces.Request;
+import org.ChatGPT.interfaces.Request;
 
 import java.util.ArrayList;
 import java.util.List;

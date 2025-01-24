@@ -10,9 +10,9 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Stack;
 
-public class ChatGPClient {
+public class ChatGPTClient {
 
-	private static ChatGPClient instance;
+	private static ChatGPTClient instance;
 
 	private final Stack<HttpResponse<String>> RESPONSE_HISTORY = new Stack<>();
 
@@ -20,12 +20,12 @@ public class ChatGPClient {
 
 	private final URI TEXT_ENDPOINT_URI = URI.create("https://api.openai.com/v1/chat/completions");
 
-	public static ChatGPClient getInstance() {
-		if (instance == null) instance = new ChatGPClient();
+	public static ChatGPTClient getInstance() {
+		if (instance == null) instance = new ChatGPTClient();
 		return instance;
 	}
 
-	private ChatGPClient() {
+	private ChatGPTClient() {
 	}
 
 	public void setApiKey(String apikey) {
