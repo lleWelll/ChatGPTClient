@@ -39,6 +39,7 @@ This Example shows minimal configured request. Additionally, you can set: ```mod
 Definition of each of settings you can find in [official ChatGPT's documentation](https://platform.openai.com/docs/api-reference/chat/create#chat-create-messages)
 
 ## Useful Links
+Project's Doc: https://www.javadoc.io/doc/io.github.llewelll/ChatGPTClient/latest/index.html <br />
 Project's Maven Central Page: https://central.sonatype.com/artifact/io.github.llewelll/ChatGPTClient <br />
 How to create API-key: https://medium.com/latinxinai/how-to-get-api-key-for-chat-gpt-3-5-or-4-0-fce40b35aa00 <br />
 Official ChatGPT Docs (if needed more information): https://platform.openai.com/docs/guides/text-generation 
