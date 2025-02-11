@@ -32,8 +32,8 @@ TextRequestBuilder builder = new TextRequestBuilder()
 TextRequest request = builder.build();
 
 ChatGPTClient client = ChatGPTClient.getInstance();
-HttpResponse<String> response = client.sendResponse(API-key, request);
-System.out.println(response.body());
+ChatGPTResponse response = client.sendRequestToTextEndPoint(API-key, request);
+System.out.println(response.getContent());
 ```
 This Example shows minimal configured request. Additionally, you can set: ```model```, ```temperature```, ```numberOfResponses```, ```asssitantContent```, ```systemContent```.
 Definition of each of settings you can find in [official ChatGPT's documentation](https://platform.openai.com/docs/api-reference/chat/create#chat-create-messages)
